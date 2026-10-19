@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Despesas</title>
+    <link rel="stylesheet" href="css/exer2.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Relatório de Despesas</h1>
+        <p class="descricao-pagina">Cadastre seus gastos e consulte as despesas por data.</p>
+
+        <section class="cartao">
+            <h2>Cadastrar despesa</h2>
+
+            <form id="formDespesa">
+                <label for="campoDescricao">Descrição</label>
+                <input type="text" id="campoDescricao" placeholder="Ex.: Mercado" maxlength="80">
+
+                <label for="campoValor">Valor (R$)</label>
+                <input type="number" id="campoValor" placeholder="Ex.: 35,90" min="0.01" step="0.01">
+
+                <label for="campoData">Data</label>
+                <input type="date" id="campoData">
+
+                <button id="btnCadastrar" class="btn-principal" type="button">Cadastrar despesa</button>
+            </form>
+        </section>
+
+        <section class="cartao">
+            <h2>Despesas cadastradas</h2>
+
+            <div class="linha-filtro">
+                <div class="campo-filtro">
+                    <label for="filtroData">Filtrar por data</label>
+                    <input type="date" id="filtroData">
+                </div>
+                <button id="btnMostrarTodos" type="button">Mostrar todas</button>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela">
+                        <tr>
+                            <td colspan="3">Carregando despesas...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="resumoDespesas" class="resumo">Carregando...</p>
+            <button id="btnLimpar" class="btn-perigo" type="button">Apagar todas as despesas</button>
+        </section>
+    </main>
+
+    <script src="js/exer2.js"></script>
+</body>
+
+</html>

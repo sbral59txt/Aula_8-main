@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Treino de Reflexos</title>
+    <link rel="stylesheet" href="css/exer1.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Jogo de Treino de Reflexos</h1>
+        <p>Clique no alvo vermelho o maior número de vezes que conseguir em 10 segundos.</p>
+
+        <section class="painel">
+            <p>Tempo: <strong id="visorTempo">10</strong> segundos</p>
+            <p>Pontuação: <strong id="visorPontuacao">0</strong></p>
+        </section>
+
+        <button id="btnIniciar">Iniciar jogo</button>
+
+        <section id="areaJogo" aria-label="Área do jogo">
+            <button id="alvo" class="alvo" aria-label="Alvo para clicar" hidden></button>
+        </section>
+
+        <p id="mensagem" aria-live="polite">Clique em “Iniciar jogo” para começar.</p>
+    </main>
+
+    <script src="js/exer1.js"></script>
+</body>
+
+</html>
